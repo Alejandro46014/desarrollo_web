@@ -1,10 +1,16 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Documento sin título</title>
-</head>
+<?php
 
-<body>
-</body>
-</html>
+require_once("../config/conexion.php");
+
+class Categoria{
+	
+	
+	//constructor
+	
+	public function __construct(){
+		
+	}
+}
+
+
+?>
