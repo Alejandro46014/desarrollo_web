@@ -1,16 +1,16 @@
 <?php
 //host
 
-define("db_host","localhost");
+define("DB_HOST","localhost");
 
 //nombre base datos
 
-define("db_name","dbsistema");
+define("DB_NAME","dbsistema");
 
 //usuario
 
-define("db_usser","Alejandro");
+define("DB_USERNAME","Alejandro");
 
 //password
 
-define("db_password","3424");
+define("DB_PASSWORD","3424");
