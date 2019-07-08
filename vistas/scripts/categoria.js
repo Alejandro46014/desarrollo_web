@@ -3,6 +3,8 @@ var tabla;
 //funcion de inicio
 function init(){
 	
+	mostrarform(false);
+	listar();
 	
 }
 
@@ -41,6 +43,31 @@ function cancelarform(){
 function listar(){
 	
 	tabla=$('#tbllistado').dataTable({
+		
+		"aProcessing" : true,
+		"aServerSide" : true,
+		dom : 'Bfrtip',
+		buttons : [
+			
+			'copyHtml5',
+			'excelHtml5',
+			'csvHtml5',
+			'pdf'
+			
+		],
+		
+		"ajax" :{
+			
+			url: '../ajax/Categoria.php?op=listar',
+			type: "get",
+			dataType: "json",
+			error: function(e){
+				console.log(e.responseText);
+			}
+		},
+		"bDestroy":true,
+		"iDisplayLength":5,
+		"order": [[0,"desc"]]
 		
 	}).DataTable();
 	
